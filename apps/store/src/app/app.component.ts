@@ -1,10 +1,10 @@
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
-import { getAllGames } from '../fake-api';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '@bg-hoard/store/ui-shared';
 import { RatingPipe } from '@bg-hoard/store/util-formatters';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   standalone: true,
@@ -14,6 +14,7 @@ import { RatingPipe } from '@bg-hoard/store/util-formatters';
     CommonModule,
     HeaderComponent,
     RatingPipe,
+    HttpClientModule
   ],
   selector: 'bg-hoard-root',
   templateUrl: './app.component.html',
@@ -21,5 +22,9 @@ import { RatingPipe } from '@bg-hoard/store/util-formatters';
 })
 export class AppComponent {
   title = 'Board Game Hoard';
-  games = getAllGames();
+  games$ = this.http.get<any[]>('/api/games');
+
+  constructor(private readonly http: HttpClient) {
+
+  }
 }
