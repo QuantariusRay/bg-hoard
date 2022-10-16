@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StoreUtilFormattersComponent } from './store-util-formatters.component';
+import { StoreUtilFormattersComponent } from './store-util-formatters.pipe';
 
 describe('StoreUtilFormattersComponent', () => {
   let component: StoreUtilFormattersComponent;
