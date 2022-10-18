@@ -8,5 +8,5 @@
       "executor": "@bg-hoard/internal-plugin:build"
     }
   },
-  "tags": []
+  "tags": ["scope:test"]
 }
