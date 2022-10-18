@@ -26,6 +26,6 @@ export class AppComponent {
   games$ = this.http.get<Game[]>('/api/games');
 
   constructor(private readonly http: HttpClient) {
-
+    console.log('component constructed');
   }
 }
