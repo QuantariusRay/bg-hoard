@@ -6,17 +6,10 @@ import { map, switchMap } from "rxjs";
 import { HttpClient } from '@angular/common/http';
 import { RatingPipe } from '@bg-hoard/store/util-formatters';
 import { MatButtonModule } from '@angular/material/button';
-import { environment } from '../../../../../../apps/store/src/environments/environment';
 
 @Component({
   selector: 'bg-hoard-game-detail',
   standalone: true,
-  providers: [
-    {
-      provide: 'baseUrl',
-      useValue: environment.apiUrl
-    }
-  ],
   imports: [CommonModule, MatCardModule, RatingPipe, MatButtonModule],
   templateUrl: './game-detail.component.html',
   styleUrls: ['./game-detail.component.css'],
