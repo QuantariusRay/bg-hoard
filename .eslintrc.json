@@ -14,7 +14,11 @@
             "depConstraints": [
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:ui", "type:feature", "type:util"]
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:feature",
+                  "type:util"
+                ]
               },
               {
                 "sourceTag": "type:ui",
@@ -37,7 +41,6 @@
                 "sourceTag": "scope:api",
                 "onlyDependOnLibsWithTags": ["scope:api", "scope:shared"],
                 "banExternalDependencies": ["@angular/*"]
-
               },
               {
                 "sourceTag": "scope:shared",
@@ -64,6 +67,11 @@
       "env": {
         "jest": true
       },
+      "rules": {}
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
       "rules": {}
     }
   ]
