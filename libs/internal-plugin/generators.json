@@ -17,6 +17,11 @@
       "factory": "./src/generators/update-scope-schema/generator",
       "schema": "./src/generators/update-scope-schema/schema.json",
       "description": "update-scope-schema generator"
+    },
+    "check-project-scopes": {
+      "factory": "./src/generators/check-project-scopes/generator",
+      "schema": "./src/generators/check-project-scopes/schema.json",
+      "description": "check-project-scopes generator"
     }
   }
 }

@@ -1,11 +1,9 @@
-import { installPackagesTask, Tree, updateJson } from '@nrwl/devkit';
-import { UtilLibGeneratorSchema } from '../util-lib/schema';
+import { Tree, updateJson, formatFiles } from '@nrwl/devkit';
 
-export default async function (tree: Tree, schema: UtilLibGeneratorSchema) {
-  await updateJson(tree, 'nx.json', (file) => {
-    return { ...file, defaultProject: 'api'};
-  });
-  return () => {
-    installPackagesTask(tree);
-  };
+export default async function (tree: Tree) {
+  updateJson(tree, 'nx.json', (json) => ({
+    ...json,
+    defaultProject: 'api',
+  }));
+  await formatFiles(tree);
 }
