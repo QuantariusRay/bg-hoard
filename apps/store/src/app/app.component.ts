@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '@bg-hoard/store/ui-shared';
 import { RatingPipe } from '@bg-hoard/store/util-formatters';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { sendNotification} from '@bg-hoard/api/util-notifications';
 
 @Component({
   standalone: true,
