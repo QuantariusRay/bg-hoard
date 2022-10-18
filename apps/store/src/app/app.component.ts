@@ -30,7 +30,7 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'Board Game Hoard';
+  title = 'Board Game Hoard!';
   games$!: Observable<Game[]>;
 
   constructor(private readonly http: HttpClient, @Inject('baseUrl') private readonly baseUrl: string) {
